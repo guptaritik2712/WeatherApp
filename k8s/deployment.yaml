@@ -6,7 +6,7 @@ metadata:
   labels:
     app: weather-app
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: weather-app
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: weather-app
-        image: guptaritik7212/weather-app:latest
+        image: guptaritik2712/weather-app
         ports:
         - containerPort: 80
         resources:
