@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="app-main">
+
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." autocomplete="off">
+            <button id="search-btn" class="search-btn">Search</button>
+            <div class="suggestions-list" id="suggestions-list"></div>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+        <div class="loading" id="loading">Loading...</div>
+
+        <div class="weather-body" id="weather-body">
+            <div class="location-details">
+                <div class="city" id="city">
+                    Panipat, HR
+                </div>
+                <div class="date" id="date">
+                    August 30 (Monday), 2020
+                </div>
+            </div>
+            <div class="weather-status">
+                <div class="temp" id="temp">35&deg;C</div>
+                <div class="weather-icon" id="weather-icon"></div>
+                <div class="weather" id="weather">Clear</div>
+                <div class="min-max" id="min-max">32&deg;C (min) / 36&deg;C (max)</div>
+                <div class="feels-like" id="feels-like">Feels like: 37&deg;C</div>
+            </div>
+            
+            <div class="aqi-container" id="aqi-container">
+                <div class="aqi-badge" id="aqi-badge">
+                    <div class="aqi-label">Air Quality Index</div>
+                    <div class="aqi-main">
+                        <div class="aqi-number" id="aqi-number">--</div>
+                        <div class="aqi-value" id="aqi-value">Loading...</div>
+                    </div>
+                    <div class="aqi-description" id="aqi-description">Checking air quality...</div>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Humidity</span>
+                    <span id="humidity">60%</span>
+                </div>
+                <div class="detail-item" >
+                    <span class="label">Wind Speed</span>
+                    <span id="wind-speed">5 m/s</span>
+                </div>
+                <div class="detail-item" >
+                    <span class="label">Pressure</span>
+                    <span id="pressure">1013 hPa</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Visibility</span>
+                    <span id="visibility">10 km</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
