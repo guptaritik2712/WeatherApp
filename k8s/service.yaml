@@ -4,7 +4,7 @@ metadata:
   name: weather-app-service
   namespace: weather-app
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: weather-app
   ports:

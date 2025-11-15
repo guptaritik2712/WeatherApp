@@ -7,7 +7,7 @@ This guide will help you deploy the WeatherApp to your Kubernetes cluster using 
 - Kubernetes cluster (already running)
 - ArgoCD installed on the cluster
 - kubectl configured to access your cluster
-- Docker Hub account (guptaritik7212)
+- Docker Hub account (guptaritik2712)
 - Git repository for this project
 
 ## Project Structure
@@ -33,13 +33,13 @@ WeatherApp/
 
 ```powershell
 # Build the Docker image
-docker build -t guptaritik7212/weather-app:latest .
+docker build -t guptaritik2712/weather-app:latest .
 
 # Login to Docker Hub
 docker login
 
 # Push the image to Docker Hub
-docker push guptaritik7212/weather-app:latest
+docker push guptaritik2712/weather-app:latest
 ```
 
 ### 2. Push Code to GitHub
