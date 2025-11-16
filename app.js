@@ -201,7 +201,7 @@ function getweatherreportByCoords(position) {
 
 // Show weather report
 function showWeatherReport(weather) {
-    console.log(weather);
+    // console.log(weather);
     hideLoading();
     errorMessage.style.display = 'none';
     weatherBody.style.display = 'block';
@@ -346,12 +346,14 @@ const successCallback = (position) => {
 
 const errorCallback = (error) => {
     console.error('Geolocation error:', error);
-    showError('Unable to get your location. Please search for a city.');
+    // Load Panipat weather if geolocation fails
+    getweatherreport('Panipat');
 }
 
-// Get weather for user's current location
+// Get weather for user's current location, fallback to Panipat
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 } else {
-    showError('Geolocation is not supported by your browser. Please search for a city.');
+    // If geolocation not supported, load Panipat
+    getweatherreport('Panipat');
 }
