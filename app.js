@@ -1,7 +1,7 @@
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
 const weatherApi = {
-    key: "9eec84a2f0c724c7aef2abfc781faa02",
+    key: process.env.OPENWEATHER_API_KEY,
     baseUrl: "https://api.openweathermap.org/data/2.5/weather",
     aqiUrl: "https://api.openweathermap.org/data/2.5/air_pollution"
 }
